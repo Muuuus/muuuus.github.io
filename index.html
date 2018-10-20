@@ -1,64 +1,118 @@
 <!DOCTYPE html>
-<html lang="ch">
-<head>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>生日快乐</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#FFFFFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Hail Free for student</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<!-- copy these lines to your document head: -->
+	
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=320" />
+	
+	<audio style="display:none; height: 0" id="bg-music" preload="auto" src="hsj.hyperesources/m.mp3" loop="loop"></audio>
+	<script>
+        //音乐自动播放
+        $(document).ready(function(){
+            autoPlayMusic();
+            audioAutoPlay();
+        });
+        function audioAutoPlay() {
+            var audio = document.getElementById('bg-music');
+            audio.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }
+        // 音乐播放
+        function autoPlayMusic() {
+            // 自动播放音乐效果，解决浏览器或者APP自动播放问题
+            function musicInBrowserHandler() {
+                musicPlay(true);
+                document.body.removeEventListener('touchstart', musicInBrowserHandler);
+            }
+            document.body.addEventListener('touchstart', musicInBrowserHandler);
+            // 自动播放音乐效果，解决微信自动播放问题
+            function musicInWeixinHandler() {
+                musicPlay(true);
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    musicPlay(true);
+                }, false);
+                document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+            }
+            document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+        }
+        function musicPlay(isPlay) {
+            var media = document.querySelector('#bg-music');
+            if (isPlay && media.paused) {
+                media.play();
+            }
+            if (!isPlay && !media.paused) {
+                media.pause();
+            }
+        }
+    </script>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="skeleton.css">
-  <link rel="stylesheet" href="custom.css">
-  <link rel="stylesheet" href="theme.css">
 
-</head>
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
 
-<!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<body class="code-snippets-visible">
-<!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container">
-<div class="header">
-  <h2 class="title header">为自由呐喊</h2>
+	<div id="hsj_hype_container" style="margin:auto;position:relative;width:100%;height:1300px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="hsj.hyperesources/hsj_hype_generated_script.js?54201"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>你和我都会继续成长
+时间仍会继续前行
+而我们的友谊则永不褪色
 </div>
-  </div>
-<div class="container">
-  <div class="row">
-    <div class="one-half column" style="margin-top: 25%">
-      <h4>中华人民共和国宪法</h4>
-      <p>第三十三条    凡具有中华人民共和国国籍的人都是中华人民共和国公民。</p>
-      <p>第三十五条    中华人民共和国公民有言论、出版、集会、结社、游行、示威的自由。</p>
-      <h4>中华人民共和国教育法</h4>
-      <p>第五章 第四十二条 第四点 遵守学生行为规范，尊敬师长，养成良好的思想品德和行为习惯；</p>
-      <h4>中学生行为规范</h4>
-      <p>第一章 第二条 穿戴整洁、朴素大方。不烫发，不染发，不化妆，不佩戴首饰，男生不留长发<strong>（前不遮眉，后不过颈，侧不过耳）</strong>，女生不穿高跟鞋。</p>
-    </div>
-  </div>
-  <br>
-  <div class="one-half column" style="margin-top: 15%"></div><div class="one-half column" style="margin-top: 15%"></div>
-  <div class="row">
-    <div class="one-half column" style="margin-top: -5%">
-      <h4>Free Student</h4>
-      <p>我们是一群积极向上的孩子</p>
-      <p>可是却受到各种无谓规矩的束缚</p>
-      <p>我们真的自由吗</p>
-    </div>
-  </div>
+		<div>送给**般的佳佳
 </div>
-<hr />
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-<div><center><strong>为了你，为了你身边的人，以及，你喜欢的人</strong></center></div>
-  <div style="margin-top:3%"><center><strong></strong></center></div>
+		<div>生日快乐
+</div>
+		<div>感谢奔跑的青春有你同行
+</div>
+		<div>
+</div>
+		<div>有什么事我都可以找你帮忙
+包括作弊、抄作业、撩妹子
+</div>
+		<div>时光缱绻，青春不散
+</div>
+		<div>祝亲爱的佳佳十八岁生日快乐
+</div>
+		<div>🎂
+</div>
+		<div>⬇️
+</div>
+		<div>Made with love by JiaoJiao
+</div>
+		<div>高中三年，有一半的时间你是我的“女朋友
+</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
 </html>
